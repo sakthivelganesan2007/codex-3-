@@ -74,7 +74,7 @@ export default function HomePage() {
                 <Bot className="w-6 h-6 text-cyan-400 shrink-0" />
                 <input
                   type="text"
-                  placeholder="e.g. 'Build me a complete coding setup under ₹50,000'..."
+                  placeholder="Build me a complete coding setup under ₹50,000..."
                   value={heroPrompt}
                   onChange={(e) => setHeroPrompt(e.target.value)}
                   className="w-full bg-transparent text-sm sm:text-base text-slate-100 placeholder-slate-500 focus:outline-none"

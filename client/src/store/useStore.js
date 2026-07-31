@@ -22,7 +22,7 @@ export const useStore = create((set, get) => ({
     {
       id: 'msg-welcome',
       sender: 'ai',
-      text: "👋 Hi! I'm NEXORA, your AI Shopping Copilot. Tell me your budget or use-case (e.g. *\"Build a coding setup under ₹50,000\"* or *\"Gaming laptop under ₹80k with high GPU\"*), and I'll assemble & optimize your cart!",
+      text: "👋 Hi! I'm NEXORA, your AI Shopping Copilot. Tell me your budget or use-case (*\"Build a coding setup under ₹50,000\"* or *\"Gaming laptop under ₹80k with high GPU\"*), and I'll assemble & optimize your cart!",
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     }
   ],

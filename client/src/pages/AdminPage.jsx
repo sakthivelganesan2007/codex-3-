@@ -104,7 +104,7 @@ export default function AdminPage() {
                 <label className="text-slate-300 font-bold tracking-wide uppercase text-[10px]">Admin ID / Mobile Number</label>
                 <input
                   type="text"
-                  placeholder="Enter Admin ID (e.g. 8148604669)"
+                  placeholder="Enter Admin ID"
                   value={adminIdInput}
                   onChange={(e) => setAdminIdInput(e.target.value)}
                   required
@@ -116,7 +116,7 @@ export default function AdminPage() {
                 <label className="text-slate-300 font-bold tracking-wide uppercase text-[10px]">Password</label>
                 <input
                   type="password"
-                  placeholder="Enter Password (e.g. svss1234)"
+                  placeholder="Enter Password"
                   value={passwordInput}
                   onChange={(e) => setPasswordInput(e.target.value)}
                   required

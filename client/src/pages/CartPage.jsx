@@ -216,7 +216,7 @@ export default function CartPage() {
                   <form onSubmit={handleApplyCoupon} className="flex items-center gap-2">
                     <input
                       type="text"
-                      placeholder="e.g. NEXORA10"
+                      placeholder="Promo Coupon Code (NEXORA10)"
                       value={couponInput}
                       onChange={(e) => setCouponInput(e.target.value)}
                       className="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-100 uppercase font-mono focus:outline-none focus:border-cyan-500"
