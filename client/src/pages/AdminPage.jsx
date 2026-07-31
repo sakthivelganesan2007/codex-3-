@@ -26,6 +26,13 @@ export default function AdminPage() {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // Automatically refresh/reset admin authentication whenever the admin leaves the page
+  useEffect(() => {
+    return () => {
+      logoutAdmin();
+    };
+  }, [logoutAdmin]);
+
   useEffect(() => {
     if (isAdminAuthenticated) {
       async function loadStats() {
@@ -72,7 +79,7 @@ export default function AdminPage() {
                 <Lock className="w-3.5 h-3.5 text-cyan-300" /> 256-Bit Encrypted Admin Session
               </div>
               <div className="flex items-center gap-2">
-                <KeyRound className="w-3.5 h-3.5 text-cyan-300" /> Role-Based Access Control
+                <KeyRound className="w-3.5 h-3.5 text-cyan-300" /> Auto-Lock Session On Page Leave
               </div>
             </div>
           </div>
@@ -161,7 +168,7 @@ export default function AdminPage() {
             NEXORA Analytics & AI Insights
           </h1>
           <p className="text-xs text-slate-400 mt-1">
-            Logged in as Admin ID: <span className="font-bold text-blue-400">8148604669</span>
+            Logged in as Admin ID: <span className="font-bold text-blue-400">8148604669</span> (Session Auto-Locks On Leave)
           </p>
         </div>
 
