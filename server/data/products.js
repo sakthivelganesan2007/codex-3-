@@ -1,0 +1,511 @@
+export const productsData = [
+  {
+    id: "prod-101",
+    name: "NexaBook Pro 15 - AI Developer Edition",
+    category: "laptops",
+    price: 58999,
+    originalPrice: 65999,
+    rating: 4.8,
+    reviewsCount: 342,
+    stock: 18,
+    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80",
+    description: "Powered by Intel Core i7 13th Gen, 16GB LPDDR5 RAM, 512GB NVMe SSD, and Iris Xe graphics. Optimized for full-stack web development, containerized environments, and fast compilation.",
+    specs: {
+      processor: "Intel Core i7-1355U",
+      ram: "16GB LPDDR5",
+      storage: "512GB NVMe M.2 SSD",
+      display: "15.6\" FHD Anti-glare IPS",
+      weight: "1.65 kg",
+      batteryLife: "Up to 11 Hours"
+    },
+    tags: ["coding", "laptop", "college", "programming", "best-seller"],
+    compatibility: ["setup-coding", "laptop-stand", "usb-hub"],
+    badge: "AI Recommended"
+  },
+  {
+    id: "prod-102",
+    name: "CodeCraft Lite 14 Budget Laptop",
+    category: "laptops",
+    price: 42500,
+    originalPrice: 47999,
+    rating: 4.6,
+    reviewsCount: 189,
+    stock: 25,
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80",
+    description: "Compact and powerful laptop for CS students. AMD Ryzen 5 7530U, 16GB RAM, 512GB SSD. Lightweight body with clicky keyboard.",
+    specs: {
+      processor: "AMD Ryzen 5 7530U",
+      ram: "16GB DDR4",
+      storage: "512GB NVMe SSD",
+      display: "14\" FHD IPS Matte",
+      weight: "1.38 kg",
+      batteryLife: "Up to 12 Hours"
+    },
+    tags: ["coding", "budget", "college", "laptop"],
+    compatibility: ["setup-coding", "laptop-stand"],
+    badge: "Budget King"
+  },
+  {
+    id: "prod-103",
+    name: "Titan Beast G15 RTX Gaming Laptop",
+    category: "laptops",
+    price: 79999,
+    originalPrice: 89999,
+    rating: 4.9,
+    reviewsCount: 512,
+    stock: 12,
+    image: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80",
+    description: "Uncompromised gaming performance. Intel Core i7 13700H, NVIDIA RTX 4060 8GB VRAM, 16GB DDR5 RAM, 1TB SSD, 144Hz high refresh display.",
+    specs: {
+      processor: "Intel Core i7-13700H",
+      gpu: "NVIDIA RTX 4060 8GB GDDR6",
+      ram: "16GB DDR5 4800MHz",
+      storage: "1TB Gen4 NVMe SSD",
+      display: "15.6\" 144Hz FHD IPS",
+      weight: "2.3 kg"
+    },
+    tags: ["gaming", "gpu-priority", "high-performance", "laptop"],
+    compatibility: ["setup-gaming", "cooling-pad", "gaming-mouse"],
+    badge: "GPU Monster"
+  },
+  {
+    id: "prod-104",
+    name: "Apex Ultra 16 Creator & Gaming Beast",
+    category: "laptops",
+    price: 124999,
+    originalPrice: 139999,
+    rating: 4.9,
+    reviewsCount: 128,
+    stock: 8,
+    image: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80",
+    description: "Ultra-premium flagship workstation. Intel i9 14900HX, RTX 4070 8GB, 32GB DDR5, 1TB SSD, 2.5K 165Hz Mini-LED Display.",
+    specs: {
+      processor: "Intel i9 14900HX",
+      gpu: "NVIDIA RTX 4070 8GB",
+      ram: "32GB DDR5",
+      storage: "1TB NVMe PCIe 4.0",
+      display: "16\" 2.5K 165Hz Mini-LED",
+      weight: "2.4 kg"
+    },
+    tags: ["flagship", "gaming", "creator", "laptop"],
+    compatibility: ["setup-gaming", "cooling-pad", "ultrawide-monitor"],
+    badge: "Ultimate"
+  },
+  {
+    id: "prod-105",
+    name: "EcoBook Slim Entry Laptop",
+    category: "laptops",
+    price: 29999,
+    originalPrice: 34999,
+    rating: 4.3,
+    reviewsCount: 95,
+    stock: 30,
+    image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80",
+    description: "Entry-level laptop for web browsing, docs, and basic scripts. Core i3 12th Gen, 8GB RAM, 256GB SSD.",
+    specs: {
+      processor: "Intel Core i3-1215U",
+      ram: "8GB DDR4",
+      storage: "256GB SSD",
+      display: "15.6\" HD Display",
+      weight: "1.7 kg"
+    },
+    tags: ["entry", "budget", "laptop"],
+    compatibility: ["setup-basic"],
+    badge: "Ultra Saver"
+  },
+  {
+    id: "prod-201",
+    name: "NexaVision 27\" 4K IPS Ergonomic Monitor",
+    category: "monitors",
+    price: 24999,
+    originalPrice: 29999,
+    rating: 4.7,
+    reviewsCount: 210,
+    stock: 15,
+    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+    description: "27-inch 4K UHD (3840x2160) IPS panel with USB-C 65W Power Delivery, HDR400, 99% sRGB color accuracy, and height-adjustable stand.",
+    specs: {
+      resolution: "4K UHD (3840x2160)",
+      panelType: "IPS Anti-glare",
+      refreshRate: "60Hz",
+      connectivity: "USB-C (65W PD), HDMI 2.0, DP 1.4",
+      features: "Pivot, Swivel, Height Adjustment"
+    },
+    tags: ["coding", "monitor", "4k", "productivity"],
+    compatibility: ["setup-coding", "laptop"],
+    badge: "4K Clarity"
+  },
+  {
+    id: "prod-202",
+    name: "ApexCurve 34\" Ultrawide 144Hz Gaming Monitor",
+    category: "monitors",
+    price: 38500,
+    originalPrice: 44999,
+    rating: 4.8,
+    reviewsCount: 165,
+    stock: 9,
+    image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80",
+    description: "34-inch WQHD (3440x1440) 1500R Curved Ultrawide Display. 144Hz refresh rate, 1ms MPRT, FreeSync Premium, dual HDMI/DP ports.",
+    specs: {
+      resolution: "UW-QHD (3440x1440)",
+      panelType: "Curved VA",
+      refreshRate: "144Hz",
+      responseTime: "1ms",
+      features: "HDR10, FreeSync, RGB Backlight"
+    },
+    tags: ["gaming", "ultrawide", "monitor"],
+    compatibility: ["setup-gaming", "desktop"],
+    badge: "Immersive Curve"
+  },
+  {
+    id: "prod-203",
+    name: "ClarityView 24\" Full HD Studio Display",
+    category: "monitors",
+    price: 11999,
+    originalPrice: 14999,
+    rating: 4.5,
+    reviewsCount: 310,
+    stock: 40,
+    image: "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=800&q=80",
+    description: "Sleek 24-inch 1080p IPS Frameless Monitor. Low blue light filter, flicker-free tech, dual HDMI inputs.",
+    specs: {
+      resolution: "Full HD (1920x1080)",
+      panelType: "IPS",
+      refreshRate: "75Hz",
+      features: "TUV Eye Care Certified"
+    },
+    tags: ["budget", "monitor", "coding"],
+    compatibility: ["setup-coding", "setup-basic"],
+    badge: "Budget Choice"
+  },
+  {
+    id: "prod-301",
+    name: "KeyMech Pro RGB Mechanical Keyboard",
+    category: "accessories",
+    price: 4499,
+    originalPrice: 5999,
+    rating: 4.8,
+    reviewsCount: 420,
+    stock: 35,
+    image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
+    description: "Hot-swappable mechanical keyboard with custom Tactile Blue Switches, per-key RGB backlighting, aircraft aluminum frame, and detachable Type-C cable.",
+    specs: {
+      switchType: "Hot-Swappable Tactile Blue",
+      layout: "75% Compact (84 Keys)",
+      connectivity: "Bluetooth 5.1 / 2.4GHz / Type-C Wired",
+      battery: "4000mAh (Up to 200 hours)"
+    },
+    tags: ["coding", "keyboard", "gaming", "mechanical"],
+    compatibility: ["setup-coding", "setup-gaming"],
+    badge: "Top Rated"
+  },
+  {
+    id: "prod-302",
+    name: "KeyMech Lite Wireless Mechanical Keyboard",
+    category: "accessories",
+    price: 2999,
+    originalPrice: 3999,
+    rating: 4.6,
+    reviewsCount: 280,
+    stock: 22,
+    image: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80",
+    description: "Quiet Red Linear Switches for silent typing in hostel rooms or libraries. Multi-device Bluetooth connectivity.",
+    specs: {
+      switchType: "Silent Linear Red",
+      layout: "TKL (Tenkeyless)",
+      connectivity: "Wireless 2.4G & Bluetooth"
+    },
+    tags: ["keyboard", "quiet", "budget", "coding"],
+    compatibility: ["setup-coding"],
+    badge: "Quiet Typing"
+  },
+  {
+    id: "prod-303",
+    name: "Precision Pro Wireless Ergonomic Mouse",
+    category: "accessories",
+    price: 2499,
+    originalPrice: 3299,
+    rating: 4.7,
+    reviewsCount: 390,
+    stock: 50,
+    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80",
+    description: "Sculpted ergonomic design reduces wrist strain during marathon coding sessions. Hyper-fast thumb scroll wheel and multi-device pairing.",
+    specs: {
+      sensor: "4000 DPI Darkfield Sensor",
+      buttons: "7 Programmable Buttons",
+      connectivity: "Bluetooth + Unifying Receiver",
+      battery: "Rechargeable Li-Po (70 days)"
+    },
+    tags: ["mouse", "ergonomic", "coding", "productivity"],
+    compatibility: ["setup-coding"],
+    badge: "Ergonomic Pick"
+  },
+  {
+    id: "prod-304",
+    name: "ApexGlide RGB Gaming Mouse 16K DPI",
+    category: "accessories",
+    price: 1899,
+    originalPrice: 2499,
+    rating: 4.6,
+    reviewsCount: 310,
+    stock: 45,
+    image: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80",
+    description: "Ultra-lightweight 68g honeycomb chassis, 16,000 DPI optical sensor, PTFE glide feet, and customizable RGB zones.",
+    specs: {
+      sensor: "16,000 DPI Optical",
+      weight: "68 grams",
+      rgb: "16.8 Million Colors"
+    },
+    tags: ["gaming", "mouse", "budget"],
+    compatibility: ["setup-gaming"],
+    badge: "Pro Gaming"
+  },
+  {
+    id: "prod-305",
+    name: "Ergonomic Aluminium Laptop Stand with Cooling",
+    category: "accessories",
+    price: 1999,
+    originalPrice: 2699,
+    rating: 4.8,
+    reviewsCount: 540,
+    stock: 60,
+    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80",
+    description: "Heavy-duty CNC machined aluminium alloy stand. Elevates laptop to eye level, improving posture and ventilation.",
+    specs: {
+      material: "Solid Anodized Aluminium",
+      compatibility: "Laptops 10\" to 17.3\"",
+      adjustability: "Multi-angle Height & Tilt"
+    },
+    tags: ["coding", "laptop-stand", "accessory", "must-have"],
+    compatibility: ["setup-coding", "setup-gaming", "laptop"],
+    badge: "Posture Saver"
+  },
+  {
+    id: "prod-306",
+    name: "NexaHub 8-in-1 USB-C Docking Station",
+    category: "accessories",
+    price: 3299,
+    originalPrice: 4299,
+    rating: 4.7,
+    reviewsCount: 230,
+    stock: 28,
+    image: "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&w=800&q=80",
+    description: "Expand laptop ports with 4K HDMI, Gigabit Ethernet, 100W PD charging, 3x USB 3.0, and SD/TF card reader.",
+    specs: {
+      ports: "HDMI 4K, 100W PD, RJ45 1000Mbps, 3x USB 3.0, SD/TF",
+      casing: "Space Gray Aluminium"
+    },
+    tags: ["hub", "usb-c", "coding", "accessory"],
+    compatibility: ["setup-coding", "laptop"],
+    badge: "Essential Hub"
+  },
+  {
+    id: "prod-401",
+    name: "SoundSphere Active Noise Cancelling Headphones",
+    category: "audio",
+    price: 6999,
+    originalPrice: 8999,
+    rating: 4.8,
+    reviewsCount: 480,
+    stock: 20,
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+    description: "Hybrid ANC cancels up to 35dB ambient noise. High-Res Audio drivers, 40-hour battery life, and plush memory foam earcups for deep focus.",
+    specs: {
+      anc: "Hybrid Active Noise Cancellation",
+      batteryLife: "40 Hours (ANC ON)",
+      drivers: "40mm Custom Dynamic Drivers",
+      weight: "250g"
+    },
+    tags: ["audio", "anc", "headphones", "focus", "coding"],
+    compatibility: ["setup-coding", "setup-gaming"],
+    badge: "Deep Focus"
+  },
+  {
+    id: "prod-402",
+    name: "SonicPulse True Wireless Earbuds (36h Battery)",
+    category: "audio",
+    price: 3499,
+    originalPrice: 4499,
+    rating: 4.6,
+    reviewsCount: 310,
+    stock: 35,
+    image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80",
+    description: "IPX5 water-resistant TWS earbuds with quad mics for crystal clear calls. Fast charging gives 2 hours playback in 10 mins.",
+    specs: {
+      battery: "36 Hours Total Playtime",
+      bluetooth: "v5.3 Low Latency",
+      mics: "Quad Mic ENC for Calls"
+    },
+    tags: ["audio", "earbuds", "budget"],
+    compatibility: ["setup-coding"],
+    badge: "Daily Driver"
+  },
+  {
+    id: "prod-403",
+    name: "StudioPro XLR/USB Condenser Microphone Setup",
+    category: "audio",
+    price: 7499,
+    originalPrice: 9499,
+    rating: 4.9,
+    reviewsCount: 150,
+    stock: 14,
+    image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80",
+    description: "Broadcast-quality USB & XLR microphone kit complete with boom arm, shock mount, and pop filter. Ideal for streaming, podcasts, and video calls.",
+    specs: {
+      polarPattern: "Cardioid Directional",
+      sampleRate: "24-bit / 96kHz",
+      includes: "Microphone, Boom Arm, Shock Mount, Pop Filter"
+    },
+    tags: ["audio", "mic", "streaming", "creator"],
+    compatibility: ["setup-gaming", "setup-coding"],
+    badge: "Studio Grade"
+  },
+  {
+    id: "prod-404",
+    name: "DeskVibe Bluetooth Soundbar 40W RMS",
+    category: "audio",
+    price: 4999,
+    originalPrice: 6499,
+    rating: 4.5,
+    reviewsCount: 190,
+    stock: 22,
+    image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80",
+    description: "Under-monitor compact soundbar delivering punchy bass and spatial audio. Supports Optical, AUX, USB, and Bluetooth 5.0.",
+    specs: {
+      powerOutput: "40W RMS (Peak 80W)",
+      drivers: "Dual Full-Range + Bass Radiators",
+      connectivity: "Bluetooth, Optical, AUX, USB"
+    },
+    tags: ["audio", "speaker", "desktop"],
+    compatibility: ["setup-gaming", "setup-coding"],
+    badge: "Rich Sound"
+  },
+  {
+    id: "prod-501",
+    name: "TitanGrip Ergonomic Gaming & Chair",
+    category: "gaming",
+    price: 14999,
+    originalPrice: 18999,
+    rating: 4.8,
+    reviewsCount: 270,
+    stock: 10,
+    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&q=80",
+    description: "4D armrests, adjustable lumbar support, 165-degree recline, and high-density cold-cured foam cushion. Designed for 12+ hours sitting comfort.",
+    specs: {
+      recline: "90° to 165°",
+      foam: "High Density Cold-Cured",
+      gasLift: "Class 4 Heavy Duty Cylinder",
+      weightCapacity: "140 kg"
+    },
+    tags: ["gaming", "chair", "ergonomic", "setup"],
+    compatibility: ["setup-gaming", "setup-coding"],
+    badge: "Max Comfort"
+  },
+  {
+    id: "prod-502",
+    name: "ApexStrike Wireless Gamepad for PC & Console",
+    category: "gaming",
+    price: 3999,
+    originalPrice: 4999,
+    rating: 4.7,
+    reviewsCount: 380,
+    stock: 25,
+    image: "https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=800&q=80",
+    description: "Hall Effect magnetic sticks (zero drift), dual haptic vibration motors, programmable back paddles, and ultra-fast 2.4GHz dongle.",
+    specs: {
+      joysticks: "Hall Effect Anti-Drift Sensors",
+      battery: "1000mAh (20 Hours)",
+      triggers: "Linear Impulse Triggers"
+    },
+    tags: ["gaming", "controller", "pc-gaming"],
+    compatibility: ["setup-gaming"],
+    badge: "Zero Drift"
+  },
+  {
+    id: "prod-503",
+    name: "GameBeast Dual Fan Laptop Cooling Pad",
+    category: "gaming",
+    price: 1499,
+    originalPrice: 1999,
+    rating: 4.5,
+    reviewsCount: 410,
+    stock: 50,
+    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+    description: "Dual 140mm silent fans spin at 1200 RPM to lower gaming laptop thermals by up to 12°C. 7 RGB modes and dual USB pass-through.",
+    specs: {
+      fans: "2x 140mm High Speed Silent Fans",
+      rgb: "7 Dynamic Lighting Modes",
+      heights: "5 Adjustable Stand Elevations"
+    },
+    tags: ["cooling", "laptop-accessory", "gaming"],
+    compatibility: ["setup-gaming", "laptop"],
+    badge: "Cooling Guard"
+  },
+  {
+    id: "prod-601",
+    name: "SmartDesk Motorized Standing Desk (140x70cm)",
+    category: "productivity",
+    price: 22999,
+    originalPrice: 27999,
+    rating: 4.9,
+    reviewsCount: 160,
+    stock: 7,
+    image: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80",
+    description: "Dual-motor electric height adjustment (71cm to 121cm) with 4 memory presets, anti-collision sensor, and heavy steel frame.",
+    specs: {
+      motors: "Dual Quiet Electric Motors",
+      heightRange: "71cm - 121cm",
+      desktopSize: "140cm x 70cm Engineered Wood",
+      loadCapacity: "100 kg"
+    },
+    tags: ["desk", "standing-desk", "productivity", "setup"],
+    compatibility: ["setup-coding", "setup-gaming"],
+    badge: "Ergonomic Lead"
+  },
+  {
+    id: "prod-602",
+    name: "Lumina LED Desk Lamp with Wireless Charger",
+    category: "productivity",
+    price: 2299,
+    originalPrice: 2999,
+    rating: 4.6,
+    reviewsCount: 290,
+    stock: 30,
+    image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
+    description: "Flicker-free eye-care task lamp with 5 color temperatures, 10 brightness levels, 10W QI wireless charging pad, and auto-off timer.",
+    specs: {
+      lighting: "50 LED Beads (CRI > 90)",
+      wirelessCharge: "10W Fast Qi Pad",
+      timer: "30 / 60 Min Auto Shutoff"
+    },
+    tags: ["desk", "lamp", "charger", "productivity"],
+    compatibility: ["setup-coding"],
+    badge: "Smart Lighting"
+  },
+  {
+    id: "prod-603",
+    name: "HD Pro Stream 1080p Webcam with Ring Light",
+    category: "accessories",
+    price: 3799,
+    originalPrice: 4799,
+    rating: 4.6,
+    reviewsCount: 220,
+    stock: 18,
+    image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
+    description: "1080p 60fps streaming webcam featuring built-in touch-controlled ring light, dual noise-cancelling mics, and privacy shutter.",
+    specs: {
+      resolution: "1080p Full HD @ 60fps",
+      lighting: "3-Level Adjustable Ring Light",
+      fieldOfView: "90 Degree Wide Angle"
+    },
+    tags: ["webcam", "streaming", "accessory"],
+    compatibility: ["setup-coding"],
+    badge: "HD Stream"
+  }
+];
+
+export const couponsData = [
+  { code: "NEXORA10", discountPercent: 10, maxDiscount: 3000, minCartValue: 5000, description: "10% Instant Off on Orders > ₹5,000" },
+  { code: "STUDENT500", discountPercent: 0, flatDiscount: 500, minCartValue: 2000, description: "Flat ₹500 Off for College Students" },
+  { code: "SETUPAI", discountPercent: 15, maxDiscount: 5000, minCartValue: 20000, description: "15% Off on Full AI Recommended Setups" }
+];
