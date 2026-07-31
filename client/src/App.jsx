@@ -19,7 +19,7 @@ import AdminPage from './pages/AdminPage';
 export default function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-slate-950">
+      <div className="flex flex-col min-h-screen bg-gradient-to-br from-slate-100 via-slate-900 to-blue-950 text-white selection:bg-cyan-500 selection:text-slate-950 font-sans">
         <Navbar />
         <DemoScenarioRunner />
 
