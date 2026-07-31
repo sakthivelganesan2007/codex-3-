@@ -20,8 +20,12 @@ app.get('/health', (req, res) => {
   res.json({ status: 'online', system: 'NEXORA AI-Native Commerce Engine', timestamp: new Date() });
 });
 
-// Start Express Server
-app.listen(PORT, () => {
-  console.log(`⚡ NEXORA MERN Server running on http://localhost:${PORT}`);
-  console.log(`🤖 Gemini AI Assistant: ${process.env.GEMINI_API_KEY ? 'Active (Live API Key)' : 'Active (Deterministic Fallback Engine)'}`);
-});
+// Start Express Server (only when running locally outside Vercel)
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`⚡ NEXORA MERN Server running on http://localhost:${PORT}`);
+    console.log(`🤖 Gemini AI Assistant: ${process.env.GEMINI_API_KEY ? 'Active (Live API Key)' : 'Active (Deterministic Fallback Engine)'}`);
+  });
+}
+
+export default app;
