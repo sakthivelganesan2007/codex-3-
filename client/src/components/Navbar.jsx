@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useStore } from '../store/useStore';
 import { 
@@ -12,18 +12,45 @@ import {
   Scale, 
   PlayCircle,
   Menu,
-  X
+  X,
+  Settings,
+  ShieldCheck,
+  Lock,
+  Unlock,
+  ChevronDown,
+  Trash2
 } from 'lucide-react';
 
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const dropdownRef = useRef(null);
 
-  const { cart, compareList, toggleAICopilot, startDemoScenario, demoState } = useStore();
+  const { 
+    cart, 
+    compareList, 
+    toggleAICopilot, 
+    startDemoScenario, 
+    demoState, 
+    isAdminAuthenticated, 
+    clearCart 
+  } = useStore();
 
   const totalCartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setSettingsOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -37,7 +64,6 @@ export default function Navbar() {
     { name: 'AI Shop', path: '/ai-shop', icon: Bot, badge: 'AI Native' },
     { name: 'Compare', path: '/compare', icon: Scale, count: compareList.length },
     { name: 'Architecture', path: '/architecture', icon: Cpu, badge: 'Live' },
-    { name: 'Admin', path: '/admin', icon: BarChart3 },
   ];
 
   return (
@@ -133,8 +159,79 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right Actions: AI Assistant & Cart */}
+          {/* Right Actions: AI Assistant, Cart, & Settings Dropdown */}
           <div className="flex items-center gap-3">
+            {/* Settings Menu Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setSettingsOpen(!settingsOpen)}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold transition-all cursor-pointer ${
+                  location.pathname === '/admin' || settingsOpen
+                    ? 'bg-blue-600/20 border-blue-500/50 text-blue-300'
+                    : 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white'
+                }`}
+                title="Store Settings & Admin Menu"
+              >
+                <Settings className="w-4 h-4 text-cyan-400 animate-spin-slow" />
+                <span className="hidden sm:inline">Settings</span>
+                <ChevronDown className="w-3.5 h-3.5 opacity-70" />
+              </button>
+
+              {/* Dropdown Card */}
+              {settingsOpen && (
+                <div className="absolute right-0 mt-2 w-64 p-2 rounded-2xl glass-panel border border-slate-800 shadow-2xl bg-slate-950/95 z-50 animate-in fade-in slide-in-from-top-2">
+                  <div className="px-3 py-2 text-[10px] font-mono font-bold text-slate-400 border-b border-slate-800 uppercase tracking-wider">
+                    System & Admin Settings
+                  </div>
+
+                  <div className="py-1 space-y-1 text-xs">
+                    {/* Admin Portal Link */}
+                    <Link
+                      to="/admin"
+                      onClick={() => setSettingsOpen(false)}
+                      className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-200 hover:bg-blue-600/20 hover:text-blue-300 transition-colors"
+                    >
+                      <div className="flex items-center gap-2">
+                        <BarChart3 className="w-4 h-4 text-blue-400" />
+                        <span className="font-semibold">Admin Portal</span>
+                      </div>
+                      {isAdminAuthenticated ? (
+                        <span className="flex items-center gap-1 text-[10px] text-emerald-400 font-mono font-bold bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                          <Unlock className="w-3 h-3" /> Active
+                        </span>
+                      ) : (
+                        <span className="flex items-center gap-1 text-[10px] text-amber-400 font-mono font-bold bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/30">
+                          <Lock className="w-3 h-3" /> Locked
+                        </span>
+                      )}
+                    </Link>
+
+                    {/* Architecture Link */}
+                    <Link
+                      to="/architecture"
+                      onClick={() => setSettingsOpen(false)}
+                      className="flex items-center gap-2 px-3 py-2 rounded-xl text-slate-200 hover:bg-slate-900 transition-colors"
+                    >
+                      <Cpu className="w-4 h-4 text-cyan-400" />
+                      <span>Live Architecture Flow</span>
+                    </Link>
+
+                    {/* Clear Cart Action */}
+                    <button
+                      onClick={() => {
+                        clearCart();
+                        setSettingsOpen(false);
+                      }}
+                      className="w-full flex items-center gap-2 px-3 py-2 rounded-xl text-rose-400 hover:bg-rose-500/10 transition-colors text-left"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                      <span>Reset / Clear Cart Session</span>
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+
             {/* AI Copilot Trigger */}
             <button
               onClick={toggleAICopilot}
@@ -194,6 +291,13 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
+          <Link
+            to="/admin"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-lg text-sm font-medium text-blue-400 hover:bg-slate-900"
+          >
+            ⚙️ Admin Portal {isAdminAuthenticated ? '(Unlocked)' : '(Locked 🔒)'}
+          </Link>
         </div>
       )}
     </header>

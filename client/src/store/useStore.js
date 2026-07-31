@@ -39,11 +39,39 @@ export const useStore = create((set, get) => ({
   // Orders State
   orders: [],
 
+  // Admin Auth State
+  isAdminAuthenticated: (() => {
+    try {
+      return localStorage.getItem('nexora_admin_auth') === 'true';
+    } catch (e) {
+      return false;
+    }
+  })(),
+
   // Demo Runner State
   demoState: {
     isRunning: false,
     currentStep: 0,
     message: ''
+  },
+
+  // Admin Auth Actions
+  loginAdmin: (id, password) => {
+    if (id === '8148604669' && password === 'svss1234') {
+      try {
+        localStorage.setItem('nexora_admin_auth', 'true');
+      } catch (e) {}
+      set({ isAdminAuthenticated: true });
+      return { success: true };
+    }
+    return { success: false, message: 'Invalid Admin ID or Password! Please verify your credentials.' };
+  },
+
+  logoutAdmin: () => {
+    try {
+      localStorage.removeItem('nexora_admin_auth');
+    } catch (e) {}
+    set({ isAdminAuthenticated: false });
   },
 
   // Actions
